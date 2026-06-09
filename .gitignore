@@ -1,0 +1,8 @@
+## FreeCAD files
+*.FCStd
+*.FCStd1
+*.FCBak
+
+## FreeCAD lock and autosave files
+*.FCStd~
+*.autosave
