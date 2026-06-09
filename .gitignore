@@ -6,3 +6,16 @@
 ## FreeCAD lock and autosave files
 *.FCStd~
 *.autosave
+
+## Latex auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
