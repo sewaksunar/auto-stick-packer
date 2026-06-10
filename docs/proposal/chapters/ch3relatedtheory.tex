@@ -1,12 +1,19 @@
-\section{Hardware}
-\lipsum[4-8]
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{images/raspimg.jpg}
-\caption{Raspberry Pi 4 Model B}
+This chapter presents the theoretical background that informs the design choices for a mechanical incense stick counting and binding machine. Emphasis is placed on kinematics, actuation, material behaviour, and practical feeding/counting strategies.
 
-\end{figure}
-\section{Software}
-\lipsum[4-8]
-\section{Dataset}
-\lipsum[4-8]
+\section{Kinematics of Intermittent-Motion Mechanisms}
+Devices that produce intermittent motion (Geneva mechanisms, ratchet–pawl systems, and cam–follower linkages) are useful for indexing and controlled transfer of discrete items. Kinematic synthesis determines dwell angles, acceleration profiles, and timing relationships required to coordinate feeding, counting, and binding operations.
+
+\section{Cam and Follower Design}
+Cam design translates continuous rotary input into prescribed follower motion. Choosing appropriate lift profiles and follower types (roller, flat-faced) reduces impact loading and wear—important when handling slender, fragile sticks.
+
+\section{Force, Torque and Power Estimation}
+Sizing power transmission elements requires estimating steady and peak loads from friction, impact during transfers, and binding actions. Simple static and dynamic calculations, augmented by safety factors, guide selection of input drive, gear ratios, and bearings.
+
+\section{Materials, Wear and Tolerance Management}
+Component materials and surface treatments influence longevity and reliability. For low-cost manufacture, combining wear-resistant pins and low-friction polymer guides often yields good trade-offs. Specifying realistic tolerances and clearances mitigates jamming and increases reproducibility.
+
+\section{Counting, Feeding and Binding Principles}
+Reliable counting is achieved via mechanical escapements, cam-actuated gates, or indexed pockets that present one item per cycle. Passive guides and compliant elements (springs, rollers) reduce misfeeds. Binding methods (adhesive, mechanical clamps, twisting) must be chosen for simplicity, speed, and maintainability.
+
+\section{Validation and Testing Approach}
+Prototype validation focuses on cycle-count accuracy, throughput stability, and wear patterns. Measurements using tachometers, run-count logs, and periodic inspection help quantify performance and guide iterative improvements.

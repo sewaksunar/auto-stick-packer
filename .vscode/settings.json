@@ -4,7 +4,7 @@
   },
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.autoBuild.onSave.enabled": true,
-  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipe.default": "latexmk (auto multipass)",
   "latex-workshop.latex.tools": [
     {
       "name": "pdflatex",
@@ -20,6 +20,17 @@
       "name": "biber",
       "command": "biber",
       "args": ["%DOCFILE%"]
+    },
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
     }
 
   ],
@@ -37,6 +48,12 @@
         "biber",
         "pdflatex",
         "pdflatex"
+      ]
+    },
+    {
+      "name": "latexmk (auto multipass)",
+      "tools": [
+        "latexmk"
       ]
     }
   ],

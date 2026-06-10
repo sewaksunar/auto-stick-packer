@@ -1,3 +1,5 @@
+\pdfminorversion=7
+
 \documentclass[12pt,a4paper]{report}
 \usepackage[a4paper,
     left=1.25in,
@@ -12,10 +14,19 @@
 \usepackage{setspace}
 \onehalfspacing
 
+\usepackage{subcaption} % Add this in your document preambless
+\captionsetup[subfigure]{list=true}
+% \setcounter{lofdepth}{2}
+
 \usepackage{lipsum}
-\usepackage{acronym}
+\usepackage[nohyperlinks]{acronym}
 \usepackage{graphicx}
+\usepackage{capt-of}
 \graphicspath{ {./images/} }
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+\usepackage{pdflscape} % Add this in your document preamble
 
 \renewcommand*\contentsname{Table of Contents}
 
@@ -33,7 +44,6 @@
 \renewcommand{\cfttabaftersnum}{:}
 \settowidth{\mylen}{\cfttabpresnum\cfttabaftersnum}
 \addtolength{\cfttabnumwidth}{\mylen}
-
 
 \titlecontents{chapter}
 [5.5em] %5.3
@@ -77,6 +87,7 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
+\hypersetup{pageanchor=false}
 \input{titlepage}
 
 \pagenumbering{roman}
@@ -93,7 +104,6 @@
 
 \tableofcontents
 \thispagestyle{empty}
-\addtocounter{page}{-1}
 \newpage
 
 \listoffigures
@@ -110,6 +120,7 @@
 \input{abbreviation}
 \newpage
 
+\hypersetup{pageanchor=true}
 \pagenumbering{arabic}
 
 \chapter{Introduction}
@@ -136,14 +147,11 @@
 \label{result}
 \input{chapters/ch6result}
 
-\chapter*{Gantt Chart}
+% \chapter*{Gantt Chart}
 \addcontentsline{toc}{chapter}{Gantt Chart}
-\label{ganttchart}
+% \label{ganttchart}
 \input{ganttchart}
 
-\chapter*{References}
-\addcontentsline{toc}{chapter}{References}
-\label{references}
 \input{references}
 
 \end{document}
