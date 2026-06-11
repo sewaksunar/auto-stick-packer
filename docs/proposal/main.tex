@@ -14,6 +14,10 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% Load the url package
+\usepackage{url}
+
+% If you also want clickable links, load hyperref instead (it includes url)
 \usepackage{subcaption} % Add this in your document preambless
 \captionsetup[subfigure]{list=true}
 % \setcounter{lofdepth}{2}
@@ -146,6 +150,9 @@
 \chapter{Result And Analysis}
 \label{result}
 \input{chapters/ch6result}
+
+% pictures of real machine (inspired) in market 
+\addcontentsline{toc}{chapter}{Gallery of Related Machines}
 
 % \chapter*{Gantt Chart}
 \addcontentsline{toc}{chapter}{Gantt Chart}
